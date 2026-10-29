@@ -1,0 +1,90 @@
+{
+  "dataset_metadata": {
+    "name": "SkillReadiness-AI Synthetic Evaluation Benchmark",
+    "version": "1.0.0",
+    "description": "Synthetic multi-profile benchmark dataset for validating skill extraction precision/recall, gap identification, readiness calculation, and prerequisite ordering. This is a synthetic engineering evaluation dataset, not a human subjects learner trial.",
+    "created_at": "2026-10-29",
+    "profiles_count": 5
+  },
+  "profiles": [
+    {
+      "id": "profile_1_junior_backend",
+      "name": "Junior Backend Learner",
+      "target_role": "Backend Developer",
+      "resume_text": "Junior developer experienced in Python and SQL. Built basic scripts and completed coursework in Git. Looking to learn FastAPI and Docker.",
+      "ground_truth_skills": ["Python", "SQL", "Git"],
+      "expected_core_gaps": ["FastAPI", "Node.js", "MongoDB", "PostgreSQL", "REST API", "Docker"],
+      "expected_readiness_range": [10.0, 35.0],
+      "simulated_assessment": {
+        "Python": 0.8,
+        "SQL": 0.6,
+        "Git": 0.7
+      }
+    },
+    {
+      "id": "profile_2_frontend_specialist",
+      "name": "Frontend Specialist Transitioning to Full Stack",
+      "target_role": "Full Stack Developer",
+      "resume_text": "Frontend Engineer with 3+ years experience building web applications. Expert in React, TypeScript, JavaScript, HTML5, CSS3, and Tailwind CSS. Built responsive designs and used Git. No experience with Python or MongoDB.",
+      "ground_truth_skills": ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Responsive Design", "Git"],
+      "expected_core_gaps": ["Node.js", "Python", "FastAPI", "MongoDB", "SQL", "REST API", "Docker"],
+      "expected_readiness_range": [25.0, 50.0],
+      "simulated_assessment": {
+        "React": 1.0,
+        "JavaScript": 1.0,
+        "TypeScript": 0.9,
+        "Git": 0.8
+      }
+    },
+    {
+      "id": "profile_3_complete_beginner",
+      "name": "Career Transitioner / Beginner",
+      "target_role": "Full Stack Developer",
+      "resume_text": "Business graduate transitioning to tech. Completed an introductory seminar on software workflows and team collaboration with agile methodology.",
+      "ground_truth_skills": ["Agile Methodology", "Team Collaboration"],
+      "expected_core_gaps": ["JavaScript", "TypeScript", "React", "Node.js", "Python", "FastAPI", "MongoDB", "SQL", "Git", "REST API", "Docker"],
+      "expected_readiness_range": [0.0, 15.0],
+      "simulated_assessment": null
+    },
+    {
+      "id": "profile_4_senior_fullstack",
+      "name": "Senior Full Stack Architect",
+      "target_role": "Full Stack Developer",
+      "resume_text": "Senior Full Stack Architect with 6 years experience. Expert in Python, FastAPI, Node.js, React, TypeScript, and JavaScript. Extensive experience designing REST API architectures and microservices. Built scalable databases using MongoDB, SQL, PostgreSQL, and Redis. Containerized applications with Docker and deployed via Git.",
+      "ground_truth_skills": ["Python", "FastAPI", "Node.js", "React", "TypeScript", "JavaScript", "REST API", "Microservices", "MongoDB", "SQL", "PostgreSQL", "Redis", "Docker", "Git"],
+      "expected_core_gaps": [],
+      "expected_readiness_range": [70.0, 100.0],
+      "simulated_assessment": {
+        "Python": 1.0,
+        "FastAPI": 1.0,
+        "React": 1.0,
+        "JavaScript": 1.0,
+        "TypeScript": 0.9,
+        "Node.js": 0.9,
+        "Docker": 1.0,
+        "MongoDB": 0.9,
+        "SQL": 1.0,
+        "Git": 1.0,
+        "REST API": 1.0
+      }
+    },
+    {
+      "id": "profile_5_devops_cloud",
+      "name": "DevOps Engineer Lacking Orchestration",
+      "target_role": "DevOps / Cloud Engineer",
+      "resume_text": "Systems Administrator with hands-on skills in Linux, Bash, Docker, Git, CI/CD, and Python. Automated server provisioning with Terraform. Working with AWS cloud architecture.",
+      "ground_truth_skills": ["Linux", "Bash", "Docker", "Git", "CI/CD", "Python", "Terraform", "AWS"],
+      "expected_core_gaps": ["Kubernetes"],
+      "expected_readiness_range": [50.0, 85.0],
+      "simulated_assessment": {
+        "Linux": 1.0,
+        "Docker": 1.0,
+        "Git": 0.9,
+        "CI/CD": 0.8,
+        "AWS": 0.8,
+        "Bash": 0.9,
+        "Python": 0.7
+      }
+    }
+  ]
+}
